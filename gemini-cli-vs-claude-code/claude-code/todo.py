@@ -23,7 +23,7 @@ EMPTY = "[ ]"
 
 def _fmt_task(task: dict) -> str:
     status = CHECK if task["completed"] else EMPTY
-    suffix = f"  (done {task['completed_at'][:10]})" if task["completed_at"] else ""  # noqa E501
+    suffix = f"  (done {task['completed_at'][:10]})" if task["completed_at"] else ""
     return f"  {task['id']:>3}  {status}  {task['description']}{suffix}"
 
 
