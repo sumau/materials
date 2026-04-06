@@ -2,7 +2,7 @@
 
 import json
 import os
-import sys  # noqa: F401
+# import sys
 import tempfile
 import unittest
 from unittest.mock import patch
