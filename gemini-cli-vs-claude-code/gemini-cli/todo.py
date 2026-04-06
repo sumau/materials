@@ -31,7 +31,11 @@ class TodoManager:
         if self.tasks:
             task_id = max(task["id"] for task in self.tasks) + 1
 
-        new_task = {"id": task_id, "description": description, "completed": False}
+        new_task = {
+            "id": task_id,
+            "description": description,
+            "completed": False,
+        }
         self.tasks.append(new_task)
         self.save_tasks()
         return new_task
