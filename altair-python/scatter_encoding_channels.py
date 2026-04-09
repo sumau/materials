@@ -8,7 +8,6 @@ movies = movies.dropna(
         "Worldwide Gross",
         "IMDB Rating",
         "Major Genre",
-        "MPAA Rating",
     ]
 )
 

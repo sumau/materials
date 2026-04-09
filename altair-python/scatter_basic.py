@@ -6,9 +6,6 @@ movies = movies.dropna(
     subset=[
         "Production Budget",
         "Worldwide Gross",
-        "IMDB Rating",
-        "Major Genre",
-        "MPAA Rating",
     ]
 )
 
