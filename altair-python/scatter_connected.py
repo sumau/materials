@@ -20,7 +20,11 @@ scatter = (
     .encode(
         x="Production Budget:Q",
         y="Worldwide Gross:Q",
-        color=(alt.when(brush).then("Major Genre:N").otherwise(alt.value("lightgray"))),
+        color=(
+            alt.when(brush)
+            .then("Major Genre:N")
+            .otherwise(alt.value("lightgray")),
+        ),
     )
     .add_params(brush)
 )
