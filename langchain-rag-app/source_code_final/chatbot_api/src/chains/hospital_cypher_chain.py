@@ -12,9 +12,8 @@ graph = Neo4jGraph(
     url=os.getenv("NEO4J_URI"),
     username=os.getenv("NEO4J_USERNAME"),
     password=os.getenv("NEO4J_PASSWORD"),
+    database=os.getenv("NEO4J_DATABASE", "neo4j"),
 )
-
-graph.refresh_schema()
 
 cypher_generation_template = """
 Task:
@@ -154,4 +153,5 @@ hospital_cypher_chain = GraphCypherQAChain.from_llm(
     cypher_prompt=cypher_generation_prompt,
     validate_cypher=True,
     top_k=100,
+    allow_dangerous_requests=True,
 )
